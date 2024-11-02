@@ -1,0 +1,9 @@
+module muxy16x1(out,i,s);
+input [7:0]i;
+input [2:0]s;
+output out;
+wire [2:0]t;
+muxy4x1 x0(t[0],i[3:0],s[1:0]);
+muxy4x1 x1(t[1],i[7:4],s[1:0]);
+muxy2x1 x2(out,t[1:0],s[2]);
+endmodule
